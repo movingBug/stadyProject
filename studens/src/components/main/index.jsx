@@ -4,13 +4,19 @@
  * @Author: sueRimn
  * @Date: 2019-09-20 14:16:41
  * @LastEditors: sueRimn
- * @LastEditTime: 2019-09-20 17:02:41
+ * @LastEditTime: 2019-09-20 20:53:54
  */
 import React, { Component } from 'react';
 import styles from './index.scss';
 import ReactEcharts from 'echarts-for-react';
+import SolveComponent from './addsovle';
+import PerformanceComponent from './addPerformance';
 
 export class Main extends Component {
+    state = {
+        solveShow: false,
+        PerformanceShow: false
+    }
     getOption() {
         let option = {
             title: {
@@ -116,6 +122,7 @@ export class Main extends Component {
     };
 
     render() {
+        const { solveShow, PerformanceShow } = this.state;
         return (
             <div className={styles.wrap}>
                 <header>
@@ -145,15 +152,31 @@ export class Main extends Component {
                     </ul>
                     <ReactEcharts
                         option={this.getOption()}
-                        style={{ height: '536px', margin: '29px auto' }}
+                         style={{width:'100%'}}
                         className={styles['echarts-for-react']}
                     />
                     <div className={styles.btnbox}>
-                        <input className={styles.addPerformance} type='button' value='添加成绩+' />
-                        <input className={styles.addsolve} type='button' value='添加分析和解决方案+' />
+                        <input className={styles.addPerformance} type='button' value='添加成绩+' onClick={()=>{
+                            this.setState({
+                                PerformanceShow: !this.state.PerformanceShow
+                            })
+                        }} />
+                        <input className={styles.addsolve} type='button' value='添加分析和解决方案+' onClick={()=>{
+                            this.setState({
+                                solveShow: !this.state.solveShow
+                            })
+                        }}/>
                         <input className={styles.examineall} type='button' value='查看和编辑该生所有成绩' />
                     </div>
                 </main>
+                {
+                    solveShow ? <SolveComponent /> : null
+
+                }
+                {
+                    PerformanceShow ? <PerformanceComponent /> : null
+                }
+
             </div>
         );
     }

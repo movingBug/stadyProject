@@ -7,11 +7,16 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "datapicker": "^1.0.0",
     "dva": "^2.4.1",
     "echarts": "^4.3.0",
     "echarts-for-react": "^2.0.15-beta.0",
+    "laydate": "^1.0.7",
+    "mouth": "^0.1.2",
+    "rc-calendar": "^9.15.5",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "react-timeago": "^4.4.0"
   },
   "devDependencies": {
     "axios": "^0.19.0",
