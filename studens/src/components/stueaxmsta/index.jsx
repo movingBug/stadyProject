@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import style from "./index.scss"
-import { Table,Modal, Input,Select,Button,Popconfirm,
-    message , Divider, Form} from 'antd';
+import { Table,Modal, Input,Select,Button} from 'antd';
 const { Option } = Select;
 const { confirm } = Modal;
 //import axios from "axios"
