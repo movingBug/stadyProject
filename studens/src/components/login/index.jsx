@@ -4,7 +4,7 @@
  * @Author: sueRimn
  * @Date: 2019-09-19 11:37:30
  * @LastEditors: sueRimn
- * @LastEditTime: 2019-09-20 11:17:33
+ * @LastEditTime: 2019-09-20 14:18:09
  */
 import React, { Component } from 'react';
 import styles from './index.scss';
@@ -50,6 +50,7 @@ export class LoginRegistry extends Component {
         if (phonenum !== '' && password !== '') {
             await this.props.dispatch({ type: 'example/loginTest', payload: { phonenum, password, isChecked } });
             alert(this.props.example.loginmsg);
+            this.props.history.push('/main')
         }
     }
     handleRegister = () => {

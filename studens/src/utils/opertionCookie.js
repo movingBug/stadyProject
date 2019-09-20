@@ -4,7 +4,7 @@
  * @Author: sueRimn
  * @Date: 2019-09-20 11:27:48
  * @LastEditors: sueRimn
- * @LastEditTime: 2019-09-20 11:56:59
+ * @LastEditTime: 2019-09-20 14:15:33
  */
 import Cookie from 'js-cookie';
 
@@ -14,8 +14,12 @@ const value = () => {
     return Cookie.get(key);
 }
 
-export function setCookie() {
-    console.log(value());
+export function getCookie(){
+    return Cookie.get(key);
+}
+
+export function setCookie(value) {
+    console.log(value);
     return Cookie.set(key, value, { expires: 7 });
 }
 

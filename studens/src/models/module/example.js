@@ -4,10 +4,17 @@
  * @Author: sueRimn
  * @Date: 2019-09-18 21:32:19
  * @LastEditors: sueRimn
- * @LastEditTime: 2019-09-20 11:48:47
+ * @LastEditTime: 2019-09-20 14:14:48
  */
 import { login, register } from '../../services/example';
-import { setCookie, removeCookie, getCookie } from '../../utils/opertionCookie';
+import { setCookie, removeCookie,getCookie} from '../../utils/opertionCookie';
+
+const account = '';
+
+if(getCookie()){
+  account = getCookie();
+}
+
 export default {
 
   namespace: 'example',
@@ -30,7 +37,7 @@ export default {
       // console.log(cookie);
       //七天免登陆
       if (payload.isChecked) {
-        setCookie();
+        setCookie(account);
       }
       yield put({ type: 'changeLoginmsg', payload: result.msg })
     },
