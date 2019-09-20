@@ -1,5 +1,20 @@
+/*
+ * @Descripttion: 
+ * @version: 
+ * @Author: sueRimn
+ * @Date: 2019-09-18 21:32:19
+ * @LastEditors: sueRimn
+ * @LastEditTime: 2019-09-19 20:42:36
+ */
 import request from '../utils/request';
 
-export function query() {
-  return request('/api/users');
+export function login(params) {
+  let url = '/api/emstu/teacher/login';
+  return request.post(url,params);
 }
+
+export function register(params) {
+  let url = '/api/emstu/teacher/register';
+  return request.post(url,params);
+}
+
