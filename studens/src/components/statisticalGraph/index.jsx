@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import style from "./index.scss" 
 import { Checkbox, Button,Switch,Form} from 'antd';
-function onChange(checked) {
-    console.log(`switch to ${checked}`);
-  }
 @Form.create({ name: "index" })
 
 class index extends Component {
@@ -58,5 +55,8 @@ class index extends Component {
         );
     }
 }
+function onChange(checked) {
+    console.log(`switch to ${checked}`);
+  }
 
 export default index;

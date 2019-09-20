@@ -6,24 +6,7 @@ const { Option } = Select;
 const { confirm } = Modal;
 //import axios from "axios"
 
-function handleChange(value) {
-  console.log(`selected ${value}`)
-}
-  
-function showConfirm() {
-  confirm({
-    title: '',
-    content: '你确定删除吗?',
-    onOk() {
-      return new Promise((resolve, reject) => {
-        setTimeout(Math.random() > 0.5 ? resolve : reject, 1000);
-      }).catch(() => console.log('Oops errors!'));
-    },
-    onCancel() {
-    }
-  });
-}
-  const columns = [
+const columns = [
       { title: "序号", dataIndex: "序号", key: "序号" },
       { title: '日期', dataIndex: '日期', key: '日期' },
       { title: '理论', dataIndex: '理论', key: '理论' },
@@ -39,9 +22,9 @@ function showConfirm() {
         }
       }
         
-  ];
+];
   
-  const data = [
+const data = [
         {
             key: 1,
             序号: 1,
@@ -82,7 +65,7 @@ function showConfirm() {
             是否周考: "否",
             操作:["编辑","删除"]   
         }
-  ];
+];
  
 class index extends Component {
     render() {
@@ -115,33 +98,23 @@ class index extends Component {
             </div>
         )
     }
-  //   //添加编辑用户
-  // modal = (type, row) => {
-  //   this.setState({
-  //     visible: true,
-  //     modalType: type
-  //   }, () => {
-  //     this.props.form.resetFields();
-  //     if (type === 'add') return;
-  //     this.props.form.setFieldsValue({
-  //       username: row.username,
-  //       age: row.age,
-  //       address: row.address
-  //     })
-  //   })
-  // }
-  // showConfirm = ()=> {
-  //   confirm({
-  //     title: '删除',
-  //     content: '确定删除么?',
-  //     onOk() {
-  //       return new Promise((resolve, reject) => {
-  //         setTimeout(Math.random() > 0.5 ? resolve : reject, 1000);
-  //       }).catch(() => console.log('Oops errors!'));
-  //     },
-  //     onCancel() {},
-  //   });       
-  // } 
 }
 
+function handleChange(value) {
+  console.log(`selected ${value}`)
+}
+  
+function showConfirm() {
+  confirm({
+    title: '',
+    content: '你确定删除吗?',
+    onOk() {
+      return new Promise((resolve, reject) => {
+        setTimeout(Math.random() > 0.5 ? resolve : reject, 1000);
+      }).catch(() => console.log('Oops errors!'));
+    },
+    onCancel() {
+    }
+  });
+}
 export default index;
