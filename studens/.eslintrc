@@ -1,3 +1,9 @@
 {
-  "extends": "umi"
+  "extends": "umi",
+   "settings": {
+    "react": {
+      "version": "detect"
+  }
 }
+}
+
