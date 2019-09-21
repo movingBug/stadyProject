@@ -26,7 +26,7 @@ const columns = [
   
 const data = [
         {
-            key: 1,
+            key: 0,
             序号: 1,
             日期: '2018-12-24 ',
             理论: '89',
