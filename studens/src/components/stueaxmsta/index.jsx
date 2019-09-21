@@ -3,9 +3,23 @@ import style from "./index.scss"
 import { Table,Modal, Input,Select,Button} from 'antd';
 const { Option } = Select;
 const { confirm } = Modal;
-
-//import axios from "axios"
-
+function handleChange(value) {
+  console.log(`selected ${value}`)
+}
+  
+function showConfirm() {
+  confirm({
+    title: '',
+    content: '你确定删除吗?',
+    onOk() {
+      return new Promise((resolve, reject) => {
+        setTimeout(Math.random() > 0.5 ? resolve : reject, 1000);
+      }).catch(() => console.log('Oops errors!'));
+    },
+    onCancel() {
+    }
+  });
+}
 const columns = [
       { title: "序号", dataIndex: "序号", key: "序号" },
       { title: '日期', dataIndex: '日期', key: '日期' },
@@ -98,23 +112,5 @@ class index extends Component {
             </div>
         )
     }
-}
-
-function handleChange(value) {
-  console.log(`selected ${value}`)
-}
-  
-function showConfirm() {
-  confirm({
-    title: '',
-    content: '你确定删除吗?',
-    onOk() {
-      return new Promise((resolve, reject) => {
-        setTimeout(Math.random() > 0.5 ? resolve : reject, 1000);
-      }).catch(() => console.log('Oops errors!'));
-    },
-    onCancel() {
-    }
-  });
 }
 export default index;
