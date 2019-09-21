@@ -4,7 +4,7 @@
  * @Author: sueRimn
  * @Date: 2019-09-19 11:37:30
  * @LastEditors: sueRimn
- * @LastEditTime: 2019-09-20 14:18:09
+ * @LastEditTime: 2019-09-20 23:11:50
  */
 import React, { Component } from 'react';
 import styles from './index.scss';
@@ -45,6 +45,7 @@ export class LoginRegistry extends Component {
             })
         }
     }
+    
     handleLogin = async () => {
         const { phonenum, password, isChecked } = this.state;
         if (phonenum !== '' && password !== '') {
