@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import style from "./index.scss" 
-import {  Button,Switch,Form} from 'antd';
+import {Button,Switch,Form} from 'antd';
 // @Form.create({ name: "index" })
 
 class index extends Component {
