@@ -119,7 +119,7 @@
 
     .ul {
       margin-top: 0.22rem;
-      padding-left: 1.35rem;
+      padding-left: 0.8rem;
       height: 0.3rem;
     }
 
@@ -127,7 +127,7 @@
       font-size: 0.13rem;
       float: left;
       line-height: 0.3rem;
-      width:0.5rem;
+      width:1rem;
     }
 
     .action {
@@ -144,42 +144,55 @@
       border-bottom: 0.02rem solid #ccc;
     }
 
-    .check {
-      margin-top: 0.05rem;
-      width: 2rem;
-      margin-left: 0.5rem;
-      font-size: 0.12rem;
-    }
+    
 
     .iptbox {
       width: 100%;
       text-align: center;
-      margin-top: 0.21rem;
+      margin-top: 0.8rem;
       display: flex;
       flex-direction: column;
     }
 
    .iptbox .p {
-     height: .3rem;
-     margin-top: 0.1rem;
+     width: 90%;
+     margin-left: 5%;
+     margin-top: 0.2rem;
    }
 
     .ipts {
-      width: 2rem;
+      width: 100%;
       padding-left: 0.1rem;
+      border-radius: 0.05rem;
       height: 0.34rem;
       border: 0.01rem solid #ccc;
       margin-top: 0.1rem;
+      float: left;
       position: relative;
       top:-0.9rem;
     }
-
+    .ipts input {
+      float: left;
+    }
+    .check {
+      width: 1rem;
+      margin-left: 0.2rem;
+      float: left;
+      font-size: 0.12rem;
+      position: relative;
+      top: -0.8rem;
+    }
+    .check input {
+      float: left;
+    }
     .btn {
-      width: 2rem;
+      width: 100%;
       height: 0.34rem;
       border: 0;
-      margin-top: 0.22rem;
       color: white;
+      position: relative;
+      top: -0.05rem;
+      float: left;
       border-radius: 0.05rem;
       background: rgba(63, 81, 181, 1);
       position: relative;

@@ -4,7 +4,7 @@
  * @Author: sueRimn
  * @Date: 2019-09-18 21:32:19
  * @LastEditors: sueRimn
- * @LastEditTime: 2019-09-20 14:14:48
+ * @LastEditTime: 2019-09-21 09:57:54
  */
 import { login, register } from '../../services/example';
 import { setCookie, removeCookie,getCookie} from '../../utils/opertionCookie';
@@ -39,10 +39,12 @@ export default {
       if (payload.isChecked) {
         setCookie(account);
       }
+     
       yield put({ type: 'changeLoginmsg', payload: result.msg })
     },
     //注册
     *sendregister({ payload }, { put, call }) {
+      
       const params = {
         username: payload.phonenum,
         password: payload.password
