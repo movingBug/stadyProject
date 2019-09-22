@@ -4,7 +4,7 @@
  * @Author: sueRimn
  * @Date: 2019-09-20 14:16:41
  * @LastEditors: sueRimn
- * @LastEditTime: 2019-09-20 20:53:54
+ * @LastEditTime: 2019-09-22 20:18:04
  */
 import React, { Component } from 'react';
 import styles from './index.scss';
@@ -166,15 +166,18 @@ export class Main extends Component {
                                 solveShow: !this.state.solveShow
                             })
                         }}/>
-                        <input className={styles.examineall} type='button' value='查看和编辑该生所有成绩' />
+                        <input className={styles.examineall} type='button' value='查看和编辑该生所有成绩' onClick={()=>{
+                            this.props.history.push('/statisticalGraph')
+                        }}/>
                     </div>
                 </main>
                 {
-                    solveShow ? <SolveComponent /> : null
+                   // solveShow ?  : null<SolveComponent />
 
                 }
+                <PerformanceComponent />
                 {
-                    PerformanceShow ? <PerformanceComponent /> : null
+                   // PerformanceShow ?  : null
                 }
 
             </div>

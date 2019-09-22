@@ -4,15 +4,13 @@
  * @Author: sueRimn
  * @Date: 2019-09-18 21:32:19
  * @LastEditors: sueRimn
- * @LastEditTime: 2019-09-20 14:18:01
+ * @LastEditTime: 2019-09-21 15:10:24
  */
 import React from 'react';
 import { Router, Route, Switch } from 'dva/router';
 import Login from './components/login';
 import Main from './components/main';
-import IndexPage from './routes/IndexPage';
-import Stuexamsta from "./components/stueaxmsta"
-import StatisticalGraph from "./components/statisticalGraph"
+import StatisticalGraph from "./components/statisticalGraph";
 
 function RouterConfig({ history }) {
   return (
@@ -20,7 +18,6 @@ function RouterConfig({ history }) {
       <Switch>
         <Route path="/" exact component={Login} />
         <Route path="/main" exact component={Main} />
-        <Route path="/stuexamsta"  component={Stuexamsta}/>
         <Route path="/statisticalGraph"  component={StatisticalGraph}/>
       </Switch>
     </Router>

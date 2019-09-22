@@ -4,7 +4,7 @@
  * @Author: sueRimn
  * @Date: 2019-09-19 11:37:30
  * @LastEditors: sueRimn
- * @LastEditTime: 2019-09-20 23:11:50
+ * @LastEditTime: 2019-09-22 18:59:33
  */
 import React, { Component } from 'react';
 import styles from './index.scss';
@@ -86,7 +86,7 @@ export class LoginRegistry extends Component {
                                     value={this.state.phonenum} onChange={this.handleChange} /></p>
                                 <p className={styles.p}><input type='password' placeholder='輸入密碼' className={styles.ipts}
                                     value={this.state.password} onChange={this.handleChange} /></p>
-                                <p className={styles.check}><input type='checkbox' checked={isChecked} onChange={this.handleCheck} />兩周內自動登儒</p>
+                                <p className={styles.check}><input type='checkbox' checked={isChecked} onChange={this.handleCheck}/><span>兩周內自動登儒</span></p>
                                 <p className={styles.p}><input type='button' value='登入' className={styles.btn} onClick={this.handleLogin} /></p>
                             </div> : <div className={styles.iptbox}>
                                     <p className={styles.p}><input type='text' placeholder='牛牛號/電話' className={styles.ipts}

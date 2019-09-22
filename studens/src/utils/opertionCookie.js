@@ -4,9 +4,9 @@
  * @Author: sueRimn
  * @Date: 2019-09-20 11:27:48
  * @LastEditors: sueRimn
- * @LastEditTime: 2019-09-20 14:15:33
+ * @LastEditTime: 2019-09-21 16:17:28
  */
-import Cookie from 'js-cookie';
+import Cookie from 'react-cookies';
 
 let key = 'sessionid';
 
@@ -15,7 +15,7 @@ const value = () => {
 }
 
 export function getCookie(){
-    return Cookie.get(key);
+    return Cookie.load(key);
 }
 
 export function setCookie(value) {
